@@ -28,7 +28,7 @@ export default class Navbar extends Component {
                         <span className="mr-2">
                         <i className="fas fa-cart-plus" />
                         </span>
-                        my cart
+                        My Cart
                     </ButtonContainer>
                 </Link>
             </NavWrapper>
@@ -39,8 +39,8 @@ export default class Navbar extends Component {
 const NavWrapper = styled.nav`
 background: var(--mainBlue);
 .nav-link{
-    color:var(--mainWhite)!important;
+    color:var(--mainWhite) !important;
     font-size:1.3rem;
     text-transform: capitalize;
 }
-`
+`;
