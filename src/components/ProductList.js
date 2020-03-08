@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import Product from './Product'
 import Title from './Title';
 import {storeProducts} from '../data'
+import {ProductConsumer} from '../context';
 export default class Navbar extends Component {
     state={
         products: storeProducts
-    }
-    render() {
-        console.log(this.state.products);
-        
+    };
+    render() {  
         return (
             <React.Fragment>
                 <div className="py-5">
@@ -16,7 +15,11 @@ export default class Navbar extends Component {
                 <Title name="our" title="products" />
 
                 <div className="row">
-
+                <ProductConsumer>
+                    {value => {
+                        console.log(value);
+                    }}
+                </ProductConsumer>
                 </div>
                 </div>
                 </div>
