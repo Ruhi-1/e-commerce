@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import Product from './Product'
 import Title from './Title';
-import {storeProducts} from '../data'
 import {ProductConsumer} from '../context';
 export default class Navbar extends Component {
-    state={
-        products: storeProducts
-    };
+    
     render() {  
         return (
             <React.Fragment>
