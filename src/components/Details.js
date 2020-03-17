@@ -7,7 +7,27 @@ export default class Navbar extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
-                    console.log(value.detailProduct);
+                    const {id, company, img,info,price,title,inCart} = value.detailProduct;
+                    return (
+                        <div className="container py-5">
+                            {/* title */}
+                            <div>
+                            <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
+                            <h1>{title}</h1>
+                            </div>
+                            </div>
+                            {/* end title */}
+                            {/* product info */}
+                            <div className="row">
+                                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                                <img src={img} className="img-fluid" alt="product" />
+                                </div>
+                                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                                <h2>model : {title} </h2>
+                                </div>
+                            </div>
+                        </div>
+                    )
                 }}
             </ProductConsumer>
         )
