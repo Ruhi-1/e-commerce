@@ -37,6 +37,23 @@ export default class Navbar extends Component {
                                 some info about product
                                 </p>
                                 <p className="text-muted lead">{info}</p>
+                                <div>
+                                    <Link to="/">
+                                    <ButtonContainer>
+                                        back to products
+                                    </ButtonContainer>
+                                    </Link>
+                                    <ButtonContainer 
+                                    cart
+                                    disabled={inCart ? true : false} 
+                                    onClick={() =>{
+                                        value.addToCart(id);
+                                    }}
+                                    >
+                                        {inCart ? "inCart" : "add to cart"}
+                                    </ButtonContainer>
+
+                                </div>
                                 </div>
                             </div>
                         </div>
