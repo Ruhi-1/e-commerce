@@ -27,7 +27,12 @@ export default class Navbar extends Component {
                                 <h4 className="text-title text-uppercase text-muted nt-3 mb-2">
                                     made by : <span className="text-uppercase">{company}</span>
                                 </h4>
-
+                                <h4 className="text-blue">
+                                    <strong>
+                                        price : <span>$</span>
+                                        {price}
+                                    </strong>
+                                </h4>
                                 </div>
                             </div>
                         </div>
