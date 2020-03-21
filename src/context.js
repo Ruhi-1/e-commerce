@@ -21,10 +21,19 @@ class ProductProvider extends Component {
         this.setState(() => {
             return {products: tempProducts}
         });
+    };
+
+    getItem = id => {
+        const product = this.state.products.find(item => item.id === id);
+        return product;
     }
-    handleDetail = () =>{
-        console.log('hello from detail');
-    }
+
+    handleDetail = (id) =>{
+        const product = this.getItem();
+        this.setState(() => {
+            return {detailProduct: product}
+        })
+    };
     addToCart = (id) =>{
         console.log(`hello from add to cart.id is ${id}`);
     };
