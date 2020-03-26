@@ -6,7 +6,13 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state ={
         products: [],
-        detailProduct: detailProduct
+        detailProduct: detailProduct,
+        cart: [],
+        modalOpen: false,
+        modalProduct: detailProduct,
+        cartSubTotal: 0,
+        cartTax: 0,
+        carTotal: 0
     };
     componentDidMount() {
         this.setProducts();
