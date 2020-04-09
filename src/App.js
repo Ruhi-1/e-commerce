@@ -7,7 +7,7 @@ import NavBar from './components/NavBar';
 import Details from './components/Details';
 import ProductList from './components/ProductList';
 import Default from './components/Default';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 
 class App extends Component {
   render() {
