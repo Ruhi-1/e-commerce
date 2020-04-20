@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import PaypalButton from "./PayPalButton";
+import PaypalButton from "./PayPalButton";
 import { Link } from "react-router-dom";
 
 export default class CartTotals extends Component {
