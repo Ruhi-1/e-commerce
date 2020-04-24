@@ -41,7 +41,7 @@ background: var(--mainBlue);
 .nav-link{
     color:var(--mainWhite) !important;
     font-size:1.3rem;
-    text-transform: capitalize;
+    text-transform:capitalize;
 }
 @media (max-width: 576px) {
     .navbar-nav {
