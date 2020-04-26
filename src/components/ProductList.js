@@ -8,7 +8,7 @@ export default class ProductList extends Component {
     state = {
         products: storeProducts
     };
-    render() {  
+    render() {
         return (
             <React.Fragment>
                 <ProductWrapper className="py-5">
@@ -29,5 +29,4 @@ export default class ProductList extends Component {
         )
     }
 }
-
 const ProductWrapper = styled.section``;
