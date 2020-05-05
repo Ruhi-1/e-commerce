@@ -40,9 +40,9 @@ class ProductProvider extends Component {
         });
     };
     addToCart = id => {
-        let products = [...this.state.products];
-        const index = products.indexOf(this.getItem(id));
-        const product =products[index];
+        let temProducts = [...this.state.products];
+        const index = temProducts.indexOf(this.getItem(id));
+        const product = temProducts[index];
         product.inCart = true;
         product.count = 1;
         const price = product.price;
@@ -50,7 +50,7 @@ class ProductProvider extends Component {
     
         this.setState(() => {
             return {
-                products: [...products],
+                products: [...temProducts],
                 cart: [...this.state.cart, product],
                 detailProduct: { ...product }
             };
@@ -167,21 +167,22 @@ class ProductProvider extends Component {
 
     render() {
         return (
-        <ProductContext.Provider value={{
-            ...this.state,
-            handleDetail: this.handleDetail,
-            addToCart: this.addToCart,
-            openModal: this.openModal,
-            closeModal: this.closeModal,
-            increment: this.increment,
-            decrement: this.decrement,
-            removeItem: this.removeItem,
-            clearCart: this.clearCart
-        }}
-    >
-        {this.props.children}
-    </ProductContext.Provider>
-    );
+            <ProductContext.Provider 
+                value={{
+                    ...this.state,
+                    handleDetail: this.handleDetail,
+                    addToCart: this.addToCart,
+                    openModal: this.openModal,
+                    closeModal: this.closeModal,
+                    increment: this.increment,
+                    decrement: this.decrement,
+                    removeItem: this.removeItem,
+                    clearCart: this.clearCart
+                }}
+            >
+                {this.props.children}
+            </ProductContext.Provider>
+        );
     }
 }
 
