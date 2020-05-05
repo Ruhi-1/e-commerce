@@ -5,7 +5,7 @@ export default class CartItem extends Component {
         const { increment, decrement, removeItem} = this.props.value;
 
         return (
-            <div>
+            <div className="row my-1 text-capitalize text-center">
                 <div className="col-10 mx-auto col-lg-2">
                     <img
                         src={img}
@@ -45,16 +45,16 @@ export default class CartItem extends Component {
                         </div>
                     </div>
                 </div>
-            <div className="col-10 mx-auto col-lg-2 ">
-                <div className=" cart-icon" onClick={() => removeItem(id)}>
-                    <i className="fas fa-trash" />
+                <div className="col-10 mx-auto col-lg-2 ">
+                    <div className=" cart-icon" onClick={() => removeItem(id)}>
+                        <i className="fas fa-trash" />
+                    </div>
+                </div>
+
+                <div className="col-10 mx-auto col-lg-2 ">
+                    <strong>item total : ${total} </strong>
                 </div>
             </div>
-
-            <div className="col-10 mx-auto col-lg-2 ">
-                <strong>item total : ${total} </strong>
-            </div>
-        </div>
         );
     }
 }
