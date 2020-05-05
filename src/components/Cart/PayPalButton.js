@@ -48,7 +48,7 @@ export default class MyApp extends React.Component {
             currency={currency}
             total={this.props.totalAmount}
             onError={onError}
-            onsuccess={onSuccess}
+            onSuccess={onSuccess}
             onCancel={onCancel}
             />
         );
